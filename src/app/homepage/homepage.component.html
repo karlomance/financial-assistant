@@ -1,0 +1,36 @@
+
+<div id="bg">
+    
+    <div id="page">
+
+        <div id="header">
+            <h1>Welcome</h1>
+            <h4>to financial assistant app!</h4>
+        </div>
+
+        <div id="image">
+            <img src="https://i.pinimg.com/originals/6d/04/41/6d04418173a80986a5ccdac152a7a2b2.jpg" alt="image">
+        </div>
+        
+
+        <div id="buttons">
+            <div id="login">
+                <p-button styleClass="p-button-success">Log in</p-button>
+            </div>
+            <hr>
+            or
+            <hr>
+            <div id="signup">
+                <p-button>Sign up</p-button>
+            </div>    
+        </div>
+        
+        <div *ngIf="active" style="color: red;">
+            Hello!
+        </div>
+    </div>
+
+    
+    
+</div>
+
