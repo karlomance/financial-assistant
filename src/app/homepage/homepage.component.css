@@ -1,106 +1,131 @@
-#bg {
-    background-image: url("https://wallpapercave.com/wp/wp9070010.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/img/background1.jpg);
     background-size: cover;
-    min-height: 97.5vh;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    filter: blur(8px);
 }
-#page { 
-    text-align: center;
-    width: 1100px;
-    height: 900px;
-    background-color: rgb(214, 214, 214);
-    border-radius: 30px;
+.page {
+    width: 70%;
+    max-width: 1200px;
+    height: 700px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.7);
+}
+
+.welcome-page {
+    background-color: rgb(54, 155, 255);
+    background-size: cover;
+    width: 50%;
+    color: white;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    padding: 1em;
+    height: 10%
 }
 img {
-    width: 200px;
-    border: 2px solid black;
-    border-radius: 8px;
+    width: 250px;
+}
+.welcome-page-title{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 6em 1.5em;
+    height: 80%; 
+}
+.welcome-page-footer {
+    height: 10%;
+    padding: 3em 2em;
+    font-size: 0.75em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.welcome-page-footer a{
+    color: white;
+    text-decoration: none;
+}
+.welcome-page-footer a:hover{
+    text-decoration: underline;
 }
 
-#header {
-    grid-area: header;
+.login-page {
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#image {
-    grid-area: image;
+.login-page-container{
+    width: 60%;
+    margin: 0 20%;
 }
-#buttons {
-    grid-area: buttons;
+.login-page-title{
+    color: rgb(54, 155, 255);
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 1em;
 }
-
-#page {
-    display: grid;
-    grid-template-areas:
-        'header header'
-        'image image'
-        'buttons buttons';
+.login-page-paragraf{
+    padding-bottom: 2em;
 }
-
-@media (max-width: 1280px) {
-    #page {
-        width: 900px;
-    }
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
 }
-@media (max-width: 1024px) {
-    #page {
-        width: 700px;
-    }
+.form label{
+    padding-top: 1em;
+    color: gray;
+    font-size: 0.75em;
 }
-@media (max-width: 768px) {
-    #page {
-        width: 500px;
-    }
+.form input{
+    width: 100%;
+    min-width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
-@media (max-width: 640px) {
-    #page {
-        width: 400px;
-    }
+.checkbox{
+    padding: 1em 0 3em 0;
+    font-size: 0.75em;
+    color: gray;
 }
-@media (max-width: 475px) {
-    #page {
-        width: 90%;
-    }
+.btn-login{
+    width: 100%;
+    min-width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(54, 155, 255);
+    border: none;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 2em;
 }
-
-@media (max-height: 1000px) {
-    #page {
-        height: 800px;
-    }
+.login-page-footer{
+    display: flex;
+    font-size: 0.75em;
+    color: gray;
+    text-align: justify;
 }
-@media (max-height: 900px) {
-    #page {
-        height: 700px;
-    }
+.login-page-footer a{
+    color: rgb(54, 155, 255);
+    text-decoration: none;
 }
-@media (max-height: 800px) {
-    #page {
-        height: 600px;
-    }
+.login-page-footer a:hover{
+    text-decoration: underline;
 }
-@media (max-height: 700px) {
-    #page {
-        height: 500px;
-    }
-    img {
-        width: 150px;
-    }
+.forgot-password a{
+    color: gray;
 }
-@media (max-height: 600px) {
-    #page {
-        height: 400px;
-    }
-    img {
-        width: 100px;
-    }
+.signup-link{
+    width: 50%
 }
-
-
-
-
-
-
-
+.forgot-password{
+    width: 50%;
+    text-align: right;
+}

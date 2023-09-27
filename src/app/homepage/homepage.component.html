@@ -1,36 +1,41 @@
-
-<div id="bg">
-    
-    <div id="page">
-
-        <div id="header">
-            <h1>Welcome</h1>
-            <h4>to financial assistant app!</h4>
+<div class="background"></div>
+<div class="page">
+    <div class="welcome-page">
+        <div class="logo">
+            <img src="/assets/img/logo2.png" alt="logo">
         </div>
-
-        <div id="image">
-            <img src="https://i.pinimg.com/originals/6d/04/41/6d04418173a80986a5ccdac152a7a2b2.jpg" alt="image">
+        <div class="welcome-page-title">
+            <h1>Welcome to...</h1>
+            <p>our Financial Assistant app that will help you about your financial problems.</p>
         </div>
-        
-
-        <div id="buttons">
-            <div id="login">
-                <p-button styleClass="p-button-success">Log in</p-button>
-            </div>
-            <hr>
-            or
-            <hr>
-            <div id="signup">
-                <p-button>Sign up</p-button>
-            </div>    
-        </div>
-        
-        <div *ngIf="active" style="color: red;">
-            Hello!
+        <div class="welcome-page-footer">
+            <a href="#">contact us</a>
         </div>
     </div>
-
-    
-    
+    <div class="login-page">
+        <div class="login-page-container">
+            <div class="login-page-title">Login</div>
+            <div class="login-page-paragraf">
+                <p>Welcome! Login to get amazing service.</p>
+            </div>
+            <div class="form">
+                <label for="username">User Name</label>
+                <input type="text" name="username">
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox"><span>Remember me</span>
+            </div>
+            <button class="btn-login">LOGIN</button>
+            <div class="login-page-footer">
+                <div class="signup-link">
+                    new User? <a href="#">Sign up</a>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
