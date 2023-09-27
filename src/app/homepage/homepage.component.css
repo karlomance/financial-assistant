@@ -1,6 +1,7 @@
 .background {
     width: 100vw;
     height: 100vh;
+    min-height: 800px;
     background-image: url(/assets/img/background1.jpg);
     background-size: cover;
     filter: blur(8px);
@@ -30,9 +31,9 @@
 }
 .logo {
     padding: 1em;
-    height: 10%
+    height: 10%;
 }
-img {
+.logo img {
     width: 250px;
 }
 .welcome-page-title{
@@ -40,7 +41,14 @@ img {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     padding: 6em 1.5em;
-    height: 80%; 
+    height: 35%; 
+}
+.sticker {
+    text-align: center;
+    height: 45%;
+}
+.sticker img {
+    width: 230px;
 }
 .welcome-page-footer {
     height: 10%;
@@ -89,6 +97,8 @@ img {
     height: 40px;
     border-radius: 5px;
     border: 1px solid gray;
+    font-size: 18px;
+    padding-left: 10px;
 }
 .checkbox{
     padding: 1em 0 3em 0;
@@ -128,4 +138,66 @@ img {
 .forgot-password{
     width: 50%;
     text-align: right;
+}
+
+@media (max-height: 800px){
+    .page {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        margin-left: 15%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 967px){
+    .background {
+        height: 100vh;
+        min-height: 1500px;
+    }
+    .page {
+        flex-direction: column;
+        height: 1400px;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        margin-left: 15%;
+        margin-top: 50px;
+    }
+    .welcome-page {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .login-page {
+        width: 100%;
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 497px){
+    .page{
+        height: 1500px;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    .welcome-page {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 380px){
+    .login-page-container{
+        width: 80%;
+        margin: 0 10%;
+    }
+    .welcome-page-title{
+        height: 40%; 
+    }
+    .sticker {
+        height: 40%;
+    }
+    .logo img {
+        width: 180px;
+    }
 }
