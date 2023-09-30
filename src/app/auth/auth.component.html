@@ -1,0 +1,60 @@
+<div class="background"></div>
+<div class="page">
+    <div class="welcome-page">
+        <div class="logo">
+            <img src="/assets/img/logo2.png" alt="logo">
+        </div>
+        <div class="welcome-page-title">
+            <h1>Welcome to...</h1>
+            <p>our Financial Assistant app that will help you about your financial problems.</p>
+        </div>
+        <div class="sticker">
+            <img src="/assets/img/financial-advisor.png" alt="sticker">
+        </div>
+        <div class="welcome-page-footer">
+            <a href="#">contact us</a>
+        </div>
+    </div>
+    <form class="login-page" #authForm="ngForm" *ngIf="!error">
+        <div class="login-page-container">
+            <div class="login-page-title">{{ isLoginMode ? 'Login' : 'Sign up'}}</div>
+            <div class="login-page-paragraf">
+                <p>Welcome! {{ isLoginMode ? 'Login' : 'Sign up'}} to get amazing service.</p>
+            </div>
+            <div class="form">
+                <label for="email">E-mail</label>
+                <input type="email"  ngModel name="email" required email>
+                <label for="password">Password</label>
+                <input type="password" ngModel name="password" required minlength="6">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox"><span>Remember me</span>
+            </div>
+            <button *ngIf="!isLoading" type="button" (click)="onSubmit(authForm)" class="btn-login"  [disabled]="!authForm.valid" [ngClass]="{disabled : authForm.valid === false}">{{ isLoginMode ? 'LOGIN' : 'SIGN UP'}}</button>
+            <div class="loading-spinner">
+                <app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+            </div>
+            <div class="login-page-footer" *ngIf="!isLoading">
+                <div class="signup-link">
+                    {{ isLoginMode ? 'new User?' : 'Have account?'}} <a (click)="onSwitchMode()">{{ isLoginMode ? 'Sign up' : 'Login'}}</a>
+                </div>
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div *ngIf="error" class="error">
+        <div class="error-message">
+            <h2>An error occurred!</h2>
+            <p>{{error}}</p>
+        </div>
+        <div class="error-img-container">
+            <img src="/assets/img/error.png" alt="Error Image">
+        </div>
+        <div class="btn-error-container">
+            <button class="btn-error" routerLink="" (click)="deleteError()">Try again</button>
+        </div>
+    </div>
+</div>
